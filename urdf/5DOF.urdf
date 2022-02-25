@@ -12,7 +12,7 @@
     <axis   xyz="0 0 1"/>
   </joint>
   
-    <link name="map"/>
+  <link name="map"/>
   <joint name="world_to_map" type="fixed">
     <parent link="world"/>
     <child link="map"/>
@@ -23,25 +23,11 @@
   <joint name="Link5_to_tip" type="fixed">
     <parent link="Link5"/>
     <child link="tip"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <origin xyz="0 0 .042" rpy="0 0 0"/>
   </joint>
   
   <link
     name="base_link">
-    <inertial>
-      <origin
-        xyz="0.1016 0.00320411469759873 0.0508"
-        rpy="0 0 0" />
-      <mass
-        value="0.127147471977805" />
-      <inertia
-        ixx="0.000111831356264364"
-        ixy="-2.72450714762173E-22"
-        ixz="-2.7400357790819E-21"
-        iyy="0.000561119002312225"
-        iyz="3.57128977824887E-22"
-        izz="0.000450144258992043" />
-    </inertial>
     <visual>
       <origin
         xyz="0 0 0"
@@ -56,15 +42,6 @@
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://5DOF/meshes/base_link.STL" />
-      </geometry>
-    </collision>
   </link>
   <link
     name="Link1">
@@ -88,7 +65,7 @@
     name="Thor/1"
     type="continuous">
     <origin
-      xyz="-0.052 -0.2125 0" 
+      xyz="-0.052 -0.2125 .0356" 
       rpy="1.5708 0 0" />
     <parent
       link="world" />
@@ -115,6 +92,7 @@
       </material>
     </visual>
   </link>
+
   <joint
     name="Thor/6"
     type="continuous">
@@ -128,6 +106,7 @@
     <axis
       xyz="0 0 1" />
   </joint>
+  
   <link
     name="Link3">
     <visual>
@@ -186,7 +165,7 @@
     <child
       link="Link4" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
   </joint>
   <link
     name="Link5">
